@@ -26,16 +26,16 @@ MENU = {
 
 
 
-recources = {
+resources = {
     "water": 300,
     "milk": 250,
     "coffee": 100
 
 }
 
-def is_recources_sufficent(order_ingredients):
+def is_resources_sufficent(order_ingredients):
     for item in order_ingredients:
-        if order_ingredients[item] > recources[item]:
+        if order_ingredients[item] > resources[item]:
             print(f"Sorry there is not enought {item}.")
             return False
     return True
@@ -60,10 +60,23 @@ def is_transaction_successful(money_recieved, drink_cost):
         return False
 
 
-
+def make_coffee(drink_name, order_ingredients):
+    for item in order_ingredients:
+        resources[item] -= order_ingredients[item]
+    print(f"Here is your {drink_name} .")    
 
     
+is_on = True
+while is_on:
+    choice = input("What would like to drink? (espresso/latte/ cappuccino)")
+    if choice == "off":
+        in_on = False
+    elif choice == "report":
+        print(f"Wter: {resources['water']}ml")
+        print(f"Milk: {resources['milk']}ml")
+        print(f"Coffee: {resources['coffee']}g")
+        print(f"Money: ${profit}")
+        
 
 
-input("What would like to drink? (espresso/latte/ cappuccino)")
 
