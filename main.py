@@ -40,7 +40,13 @@ def is_recources_sufficent(order_ingredients):
             return False
     return True
 
-    
+def process_coins():
+    print("Insert your coins.") 
+    total = int(input("How many quarters")) * 0.25
+    total += int(input("How many dimes? ")) * 0.10
+    total += int(input("How many nickles? ")) * 0.05
+    total += int(input("How many pennies? ")) * 0.01
+    return total
 
     
 
