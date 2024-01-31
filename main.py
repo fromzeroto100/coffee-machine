@@ -24,9 +24,26 @@ MENU = {
     }
 }
 
-resources = {
+
+
+recources = {
     "water": 300,
-    "milk": 200,
-    "coffee": 100,
+    "milk": 250,
+    "coffee": 100
+
 }
+
+def is_recources_sufficent(order_ingredients):
+    for item in order_ingredients:
+        if order_ingredients[item] > recources[item]:
+            print(f"Sorry there is not enought {item}.")
+            return False
+    return True
+
+    
+
+    
+
+
+input("What would like to drink? (espresso/latte/ cappuccino)")
 
