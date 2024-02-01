@@ -25,7 +25,7 @@ MENU = {
 }
 
 
-
+profit = 0
 resources = {
     "water": 300,
     "milk": 250,
@@ -68,7 +68,7 @@ def make_coffee(drink_name, order_ingredients):
     
 is_on = True
 while is_on:
-    choice = input("What would like to drink? (espresso/latte/ cappuccino)")
+    choice = input("What would like to drink? (espresso/latte/ cappuccino): ")
     if choice == "off":
         in_on = False
     elif choice == "report":
