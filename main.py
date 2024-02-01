@@ -77,13 +77,13 @@ while is_on:
         print(f"Coffee: {resources['coffee']}g")
         print(f"Money: ${profit}")
 
-else:
-    drink = MENU[choice]   
-    if is_resources_sufficent(drink["ingredients"]):
-        payment = process_coins()
-        if is_transaction_successful(payment, drink["cost"]):
-            make_coffee(choice, drink["ingredients"])
-        
+    else:
+        drink = MENU[choice]   
+        if is_resources_sufficent(drink["ingredients"]):
+            payment = process_coins()
+            if is_transaction_successful(payment, drink["cost"]):
+                make_coffee(choice, drink["ingredients"])
+            
 
 
 
