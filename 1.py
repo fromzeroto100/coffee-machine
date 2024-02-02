@@ -63,5 +63,20 @@ resources = {
     "milk": 200,
     "coffee": 100,
 }
+def is_resources_sufficient()
 
+is_on = True
 
+while is_on:
+    choice = input("What would you like to drink? (espresso/latte/cappuccino): ")
+    if choice == "off":
+         is_on = False
+    elif choice == "report":
+         print(f"Water: resources['water']")
+         print(f"Milk: resources['milk']ml")
+         print(f"Coffee: resources['coffee'] g")
+         print(f"Money: ${profit}")
+              
+    else:
+         drink = MENU[choice]      
+         print(drink)    
